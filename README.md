@@ -34,15 +34,42 @@ The *prefactors* available for any base unit are: M (1e6), k (1e3), m (1e-3), µ
 
 <br>
 
-### Ways to use this program:
-1) as a simple command line tool for converting units. In this
-   case only single values can be converted (at one time)
+### Installation:
 
-2) import this module into python and then you can pass numpy arrays
-   into convert_unit(), making sure to keep the default verbose=False.
+# Pip
+You can install the current release (0.0.1) with pip:
+```bash
+    pip install convmag
+```
+
+### Usage:
+
+1) a console script is provided and should be located in the Scripts directory of
+   your Python distribution after installation. If you have this directory in
+   your Path (environment variable on Windows) you can start the program by
+   typing "convmag" in the console. In this case only single values can be 
+   converted (at one time).
+
+2) the package can be imported into python and then you can pass numpy arrays
+   into the function convert_unit(), making sure to keep the default verbose=False.
    That way many values can be converted at once. The converted
    values are returned as a numpy array for further processing.
+   
+```python
+    >>> import numpy as np
+    >>> import convmag as cm
+    
+    >>> vals_in_T = np.arange(0,130,20)
+    
+    >>> vals_in_T
+    array([  0,  20,  40,  60,  80, 100, 120])
+   
+    >>> vals_in_Oe = cm.convert_unit(vals_in_T, "T", "Oe", verbose=False)
+    
+    >>> vals_in_Oe
+    array([      0.,  200000.,  400000.,  600000.,  800000., 1000000., 1200000.])
+```
 
-Pure python, no imports needed.
+Pure python, no other dependencies.
 
 Requires Python >= 3.6 because f-strings are used
