@@ -32,6 +32,8 @@ The conversions between *base units* available are:
 
 The *prefactors* available for any base unit are: M (1e6), k (1e3), m (1e-3), µ (1e-6)
 
+You can combine *prefactors* and *base units* to give e.g. MA/m or kJ/m^3
+
 <br>
 
 ### Installation:
