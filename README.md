@@ -39,7 +39,7 @@ You can combine *prefactors* and *base units* to give e.g. MA/m or kJ/m^3
 ### Installation:
 
 # Pip
-You can install the current release (0.0.1) with pip:
+You can install the current release (0.0.2) with pip:
 ```bash
     pip install convmag
 ```

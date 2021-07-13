@@ -34,7 +34,7 @@ def main():
                 print(f"{St:>{lgst}}  <->  {En:<{lgst}}:    {cm.convmag[k]}")
             print(f"{'muB/fu':>{lgst}}  <->  {'T':<{lgst}}:    requires user input")
             print("\nINFO: the factors given above are for the forward conversion")
-            print("INFO: permeability of free space, MU_0 = 4 * 3.14159 * 1e-7 Vs/Am")
+            print("INFO: permeability of free space, MU_0 = 4 * 3.14159 * 1e-7 H/m (== Vs/Am)")
             print("INFO: Bohr magneton, MU_B =  9.274015e-24 Am^2")
             print("      (muB is the unit string for conversions with Bohr magnetons)")
             print("INFO: prefactors available for any base unit:",
