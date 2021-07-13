@@ -14,7 +14,7 @@ The conversions between *base units* available are:
          emu/g  <->  Am^2/kg   :    1
          J/m^3  <->  GOe       :    1e8 * MU_0
          J/m^3  <->  erg/cm^3  :    1e1
-           GOe  <->  erg/cm^3  :    1e3 * MU_0
+      erg/cm^3  <->  GOe       :    1e7 * MU_0
           Am^2  <->  emu       :    1e3
           Am^2  <->  erg/G     :    1e3
           Am^2  <->  erg/Oe    :    1e3
@@ -39,7 +39,7 @@ You can combine *prefactors* and *base units* to give e.g. MA/m or kJ/m^3
 ### Installation:
 
 # Pip
-You can install the current release (0.0.2) with pip:
+You can install the current release (0.0.3) with pip:
 ```bash
     pip install convmag
 ```

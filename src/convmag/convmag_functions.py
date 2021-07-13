@@ -21,7 +21,7 @@ convmag = {"T_G" : "1e4",
 
            "J/m^3_GOe" : "1e8 * MU_0",
            "J/m^3_erg/cm^3" : "1e1",
-           "GOe_erg/cm^3" : "1e3 * MU_0",
+           "erg/cm^3_GOe" : "1e7 * MU_0",
 
            "Am^2_emu" : "1e3",
            "Am^2_erg/G" : "1e3",
