@@ -28,7 +28,7 @@ convmag = {"T_G" : "1e4",
            "A/m_T" : "MU_0",
            "A/m_G" : "1e4 * MU_0",
            "G_Oe" : "1",
-           "A/m_Oe" : "1e3 * MU_0",
+           "A/m_Oe" : "1e4 * MU_0",
            "emu/cm^3_T" : "1e3 * MU_0",
            "erg/Oecm^3_A/m" : "1e3",
 
