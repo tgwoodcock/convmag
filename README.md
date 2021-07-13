@@ -8,7 +8,7 @@ The conversions between *base units* available are:
            A/m  <->  T         :    MU_0
            A/m  <->  G         :    1e4 * MU_0
              G  <->  Oe        :    1
-           A/m  <->  Oe        :    1e3 * MU_0
+           A/m  <->  Oe        :    1e4 * MU_0
       emu/cm^3  <->  T         :    1e3 * MU_0
     erg/Oecm^3  <->  A/m       :    1e3
          emu/g  <->  Am^2/kg   :    1
@@ -25,7 +25,7 @@ The conversions between *base units* available are:
 
 (the factors given above are for the forward conversion)
 
-- permeability of free space, MU_0 = 4 * 3.14159 * 1e-7 Vs/Am
+- permeability of free space, MU_0 = 4 * 3.14159 * 1e-7 H/m  (== Vs/Am)
 
 - Bohr magneton, MU_B =  9.274015e-24 Am^2
       (muB is the unit string for conversions with Bohr magnetons)
