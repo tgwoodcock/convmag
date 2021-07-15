@@ -1,3 +1,6 @@
+[![PyPI Version](https://img.shields.io/pypi/v/convmag.svg)](https://pypi.python.org/pypi/convmag/)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/convmag.svg)](https://pypi.python.org/pypi/convmag/)
+
 # convmag
 Conversion between various units used in magnetism
 
@@ -36,15 +39,15 @@ You can combine *prefactors* and *base units* to give e.g. MA/m or kJ/m^3
 
 <br>
 
-### Installation:
+## Installation:
 
-# Pip
+### Pip
 You can install the current release (0.0.3) with pip:
 ```bash
     pip install convmag
 ```
 
-### Usage:
+## Usage options:
 
 1) a console script is provided and should be located in the Scripts directory of
    your Python distribution after installation. If you have this directory in
