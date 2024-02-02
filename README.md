@@ -39,6 +39,18 @@ You can combine *prefactors* and *base units* to give e.g. MA/m or kJ/m^3
 
 <br>
 
+### A word about emu
+
+emu is not a unit but indicates the system of cgs units being used (emu == electromagnetic units)
+
+The magnetisation data from magnetometers is very often given in emu, and in these cases emu implies the units erg/G. 
+This is why the equivalence emu = erg/G is given above. Many authors still quote emu/g or emu/cm^3 and therefore,
+these conversions are listed in the table above. convmag always assumes that emu has the units erg/G.
+
+**In some cases emu may take other units, so it's always worth checking this!** 
+
+<br>
+
 ## Installation:
 
 ### Pip
@@ -46,6 +58,12 @@ You can install the current release (0.0.3) with pip:
 ```bash
     pip install convmag
 ```
+
+Pure python, no other dependencies.
+
+Requires Python >= 3.6 because f-strings are used
+
+<br>
 
 ## Usage options:
 
@@ -75,6 +93,37 @@ You can install the current release (0.0.3) with pip:
     array([      0.,  200000.,  400000.,  600000.,  800000., 1000000., 1200000.])
 ```
 
-Pure python, no other dependencies.
+<br>
 
-Requires Python >= 3.6 because f-strings are used
+## Converting between Bohr Magnetons per formula unit and Tesla (muB/fu <-> T)
+
+This conversion requires user input of:
+
+- the lattice parameters *a*, *b*, *c* and *gamma*, and
+
+- the number of formula units per unit cell.
+
+Only orthogonal (cubic, tetragonal and orthorhombic) and hexagonal unit cells can be handled
+and therefore *gamma* = 90° or 120°.
+
+As an example of the number of formula units per unit cell, Nd2Fe14B is the formula unit, which
+has 17 atoms, and the unit cell contains 68 atoms, so in this case there are 4 formula units per unit cell.
+
+Calling convmag in the console, the conversion from muB to T looks like this:
+
+```
+    Input: 2.3 muB/fu T
+
+    ***INFO: muB per formula unit <-> T***
+
+    Please enter lattice parameters: a b c in Angstrom
+    a b c: 3.0 3.0 4.0
+
+    Limited to orthogonal or hexagonal unit cells:
+    Please enter gamma in deg. (90 or 120): 90
+    Please enter the number of formula units per unit cell:
+    f.u./unit cell: 2
+
+    2.3 muB per f.u. = 1.48913 T (2 f.u./unit cell, cell volume = 3.600e-29 m^3)
+```
+
