@@ -5,12 +5,14 @@ of units at the command line.
 @author: tgwoodcock
 """
 
+from .__init__ import __version__
 from . import convmag_functions as cm
 
 
 # interactive conversion
 def main():
     CONVERTING = True
+    print(f"convmag {__version__}\n")
     print("*****Conversion between magnetic units.*****")
     print("\nAt the 'Input:' promt, enter:")
     print("[value startunit endunit] e.g. 6 T A/m,")
