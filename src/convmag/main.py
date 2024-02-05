@@ -18,10 +18,10 @@ def main():
     print("[value startunit endunit] e.g. 6 T A/m,")
     print("[units] to list the available units,")
     print("[conv] to list the conversion factors or")
-    print("[q] to quit.")
+    print("[q or Enter] to quit.")
     while CONVERTING:
         r = input("\nInput: ")
-        if r == "q":
+        if r in ('q', ''):
             CONVERTING = False
         elif r == "units":
             print("\nThe base units available for conversion are:")
@@ -41,8 +41,9 @@ def main():
             print("      (muB is the unit string for conversions with Bohr magnetons)")
             print("INFO: prefactors available for any base unit:",
                   ", ".join(cm.prefactors))
+            print("INFO: emu is always defined as erg/G in this program")
 
-        else:
+        elif r.count(" ") == 2:
             val = float(r.split(" ")[0])
             startunit = r.split(" ")[1]
             endunit = r.split(" ")[2]
@@ -78,3 +79,8 @@ def main():
 
             else:
                 cm.convert_unit(val, startunit, endunit, verbose=True)
+
+        else:
+            if r.count(" ") != 2:
+                print("**Conversion syntax not recognised**")
+                print("Please enter: value startunit endunit (space separated) e.g. 6 T A/m")
