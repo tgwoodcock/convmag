@@ -18,6 +18,6 @@ Pure python version, no imports needed.
 Requires Python >= 3.6 because f-strings are used
 """
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 from .convmag_functions import *
