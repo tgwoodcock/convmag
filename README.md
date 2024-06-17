@@ -54,7 +54,7 @@ these conversions are listed in the table above. convmag always assumes that emu
 ## Installation:
 
 ### Pip
-You can install the current release (0.0.3) with pip:
+You can install the current release with pip:
 ```bash
     pip install convmag
 ```
